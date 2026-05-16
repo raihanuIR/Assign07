@@ -39,7 +39,10 @@ const router = createBrowserRouter([
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <TimelineProvider>
-      <RouterProvider router={router} />
+      <RouterProvider 
+        router={router} 
+        fallbackElement={<span className="loading loading-dots loading-xl text-[#2b4a3f]"></span>} 
+      />
       <ToastContainer position="top-center" />
     </TimelineProvider>
   </StrictMode>,

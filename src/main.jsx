@@ -5,6 +5,8 @@ import { createBrowserRouter, RouterProvider  } from 'react-router'
 import Layout from './components/Layout'
 import Home from './pages/Home'
 
+import FriendDetails from './pages/FriendDetails'
+
 const router = createBrowserRouter([
   {
     path: '/',
@@ -13,6 +15,10 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Home />,
+      },
+      {
+        path: 'friend/:id',
+        element: <FriendDetails />,
       },
     ],
   },

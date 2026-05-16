@@ -7,6 +7,7 @@ import Home from './pages/Home'
 import TimelineProvider from './Context/TimelineProvider'
 import FriendDetails from './pages/FriendDetails'
 import Timeline from './pages/Timeline'
+import NotFound from './pages/NotFound'
 import { ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
       {
         path: 'timeline',
         element: <Timeline />,
+      },
+      {
+        path: '*',
+        element: <NotFound />,
       },
     ],
   },

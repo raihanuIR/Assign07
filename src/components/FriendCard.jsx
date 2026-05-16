@@ -4,23 +4,12 @@ import { Link } from 'react-router';
 const FriendCard = ({ friend }) => {
   const { name, picture, days_since_contact, tags, status } = friend;
 
-  const getStatusDisplay = () => {
-    switch (status.toLowerCase()) {
-      case 'overdue':
-        return { label: 'Overdue', bgColor: 'bg-red-500' };
-
-      case 'almost due':
-        return { label: 'Almost Due', bgColor: 'bg-orange-400' };
-
-      case 'on-track':
-        return { label: 'On-Track', bgColor: 'bg-[#2b4a3f]' };
-        
-      default:
-        return { label: status, bgColor: 'bg-gray-500' };
-    }
+  const getStatusColor = () => {
+    if (status === 'overdue') return 'bg-red-500';
+    if (status === 'almost due') return 'bg-orange-400';
+    if (status === 'on-track') return 'bg-[#2b4a3f]';
+    return 'bg-gray-500';
   };
-
-  const statusInfo = getStatusDisplay();
 
   return (
     <Link to={`/friend/${friend.id}`} className="block bg-white rounded-xl shadow-sm p-6 flex flex-col items-center hover:shadow-md transition-shadow">
@@ -39,7 +28,8 @@ const FriendCard = ({ friend }) => {
       </div>
 
       <div className="mt-auto">
-        <span className={`px-4 py-1 text-xs font-semibold text-white rounded-full ${statusInfo.bgColor}`}>{statusInfo.label}
+        <span className={`px-4 py-1 text-xs font-semibold text-white rounded-full capitalize ${getStatusColor()}`}>
+          {status}
         </span>
       </div>
     </Link>

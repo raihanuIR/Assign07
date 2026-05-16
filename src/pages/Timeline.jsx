@@ -22,14 +22,13 @@ const Timeline = () => {
         <div className="max-w-4xl mx-auto px-4 py-12 w-full">
             <h1 className="text-3xl font-bold text-slate-900 mb-6">Timeline</h1>
             
-            <div className="mb-8 w-64">
-                <select className="select select-bordered w-full bg-slate-50 border-gray-200 shadow-sm text-gray-600">
-                    <option disabled selected>Filter timeline</option>
-                    <option>All Activity</option>
-                    <option>Call</option>
-                    <option>Text</option>
-                    <option>Video</option>
-                </select>
+            <div className="dropdown dropdown-start mb-5 w-44 ">
+                <div tabindex="0" role="button" class="btn m-1 w-full justify-between flex">Filter timeline <span className="text-md font-bold">⬇️</span></div> 
+                <ul tabindex="-1" class="dropdown-content menu bg-base-100 rounded-box z-1 w-45 p-2 shadow-sm">
+                    <li><a>Call</a></li> 
+                    <li><a>Text</a></li> 
+                    <li><a>Video</a></li>
+                </ul> 
             </div>
 
             <div className="space-y-4">

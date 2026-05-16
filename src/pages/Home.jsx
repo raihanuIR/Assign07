@@ -1,7 +1,7 @@
 import FriendCard from '../components/FriendCard';
 import friendsData from '../../friends.json';
 
-export default function Home() {
+const Home = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
       {/* Hero Section */}
@@ -48,4 +48,6 @@ export default function Home() {
       </div>
     </div>
   );
-}
+};
+
+export default Home;

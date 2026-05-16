@@ -3,7 +3,7 @@ import instagramIcon from '../assets/instagram.png';
 import facebookIcon from '../assets/facebook.png';
 import twitterIcon from '../assets/twitter.png';
 
-export default function Footer() {
+const Footer = () => {
   return (
     <footer className="bg-[#2b4a3f] text-white pt-16 pb-8 px-4 sm:px-6 lg:px-8 mt-24">
       <div className="max-w-4xl mx-auto flex flex-col items-center text-center">
@@ -43,4 +43,6 @@ export default function Footer() {
       </div>
     </footer>
   );
-}
+};
+
+export default Footer;

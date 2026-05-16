@@ -1,21 +1,25 @@
-export default function FriendCard({ friend }) {
+
+
+const FriendCard = ({ friend }) => {
   const { name, picture, days_since_contact, tags, status } = friend;
 
-  const getStatusDisplay = (statusStr) => {
-    switch (statusStr.toLowerCase()) {
+  const getStatusDisplay = () => {
+    switch (status.toLowerCase()) {
       case 'overdue':
         return { label: 'Overdue', bgColor: 'bg-red-500' };
+
       case 'almost due':
         return { label: 'Almost Due', bgColor: 'bg-orange-400' };
+
       case 'on-track':
-      case 'on track':
         return { label: 'On-Track', bgColor: 'bg-[#2b4a3f]' };
+        
       default:
-        return { label: statusStr, bgColor: 'bg-gray-500' };
+        return { label: status, bgColor: 'bg-gray-500' };
     }
   };
 
-  const statusInfo = getStatusDisplay(status);
+  const statusInfo = getStatusDisplay();
 
   return (
     <div className="bg-white rounded-xl shadow-sm p-6 flex flex-col items-center hover:shadow-md transition-shadow">
@@ -39,4 +43,6 @@ export default function FriendCard({ friend }) {
       </div>
     </div>
   );
-}
+};
+
+export default FriendCard;

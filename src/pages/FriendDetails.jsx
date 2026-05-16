@@ -31,7 +31,7 @@ const FriendDetails = () => {
     
     const toastMessages = {
       call: "Phone call logged successfully! 📞",
-      text: "Text message logged successfully! 💬",
+      text: "Text logged successfully! 💬",
       video: "Video call logged successfully! 📹"
     };
     

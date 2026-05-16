@@ -4,7 +4,7 @@
 
 KeenKeeper is a beautiful, intuitive web application designed to help you browse, tend, and nurture the relationships that matter most. It functions as a personal CRM (Customer Relationship Manager) strictly for your friendships, ensuring you never lose touch with the people you care about.
 
-![KeenKeeper Cover](src/assets/hero.png) *(Note: Add a real screenshot here!)*
+![KeenKeeper Cover](src/assets/page.png)
 
 ## 🛠️ Technologies Used
 

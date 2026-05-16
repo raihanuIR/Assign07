@@ -1,14 +1,24 @@
+import { useContext } from 'react';
 import { Pie, PieChart, Legend } from 'recharts';
+import { TimelineContext } from '../Context/Context';
 
-// #region Sample data
-const data = [
-    { name: 'Text', value: 400, fill: '#8b5cf6' },
-    { name: 'Call', value: 300, fill: '#1f4236' },
-    { name: 'Video', value: 300, fill: '#22c55e' },
-];
-
-// #endregion
 export default function Stats({ isAnimationActive = true }) {
+    const { timelines } = useContext(TimelineContext);
+
+    // Calculate actual interactions
+    let textCount = 0, callCount = 0, videoCount = 0;
+    timelines.forEach(t => {
+        if (t.action === 'text') textCount++;
+        if (t.action === 'call') callCount++;
+        if (t.action === 'video') videoCount++;
+    });
+
+    const data = [
+        { name: 'Text', value: textCount, fill: '#8b5cf6' },
+        { name: 'Call', value: callCount, fill: '#1f4236' },
+        { name: 'Video', value: videoCount, fill: '#22c55e' },
+    ];
+
     return (
         <div className="max-w-5xl mx-auto px-4 py-12 w-full">
             <h1 className="text-3xl font-bold mb-8">Friendship Analytics</h1>

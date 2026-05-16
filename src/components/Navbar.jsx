@@ -6,14 +6,14 @@ const Navbar = () => {
   return (
     <div className="w-full bg-white border-b border-gray-100 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16 items-center">
+        <div className="flex flex-col sm:flex-row justify-between sm:h-16 items-center py-4 sm:py-0">
           {/* Logo */}
-          <div className="flex-shrink-0 flex items-center">
+          <div className="flex-shrink-0 flex items-center mb-3 sm:mb-0">
             <img src={logoIcon} alt="KeenKeeper Logo" className="h-8 w-auto" />
           </div>
 
           {/* Navigation */}
-          <nav className="flex space-x-2">
+          <nav className="flex flex-wrap justify-center sm:justify-end gap-2">
             <NavLink
               to="/"
               className={({ isActive }) =>

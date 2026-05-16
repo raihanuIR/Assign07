@@ -2,13 +2,14 @@ import { Link } from 'react-router';
 import instagramIcon from '../assets/instagram.png';
 import facebookIcon from '../assets/facebook.png';
 import twitterIcon from '../assets/twitter.png';
+import logoXl from '../assets/logo-xl.png';
 
 const Footer = () => {
   return (
     <footer className="bg-[#2b4a3f] text-white pt-16 pb-8 px-4 sm:px-6 lg:px-8 mt-24">
       <div className="max-w-4xl mx-auto flex flex-col items-center text-center">
         {/* Logo */}
-        <h2 className="text-5xl font-bold mb-4 tracking-tight">KeenKeeper</h2>
+        <img src={logoXl} alt="logo-xl" className="w-48 md:w-64 lg:w-72 mb-4 h-auto" />
         
         {/* Subtitle */}
         <p className="text-emerald-100/80 mb-10 max-w-2xl text-sm">

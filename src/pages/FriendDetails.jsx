@@ -51,7 +51,7 @@ const FriendDetails = () => {
   };
 
   return (
-    <div className="p-8 max-w-5xl mx-auto">
+    <div className="p-4 md:p-8 max-w-5xl mx-auto">
       <div className="grid md:grid-cols-3 gap-8">
         
         {/* Left Side */}
@@ -93,7 +93,7 @@ const FriendDetails = () => {
         <div className="md:col-span-2 space-y-6">
           
           {/* Top 3 Cards */}
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             <div className="bg-white p-6 rounded-lg shadow text-center">
               <div className="text-3xl font-bold text-[#2b4a3f]">{days_since_contact}</div>
               <div className="text-gray-500 mt-1">Days Since Contact</div>
@@ -120,7 +120,7 @@ const FriendDetails = () => {
           {/* Check-In Card */}
           <div className="bg-white p-6 rounded-lg shadow">
             <h3 className="font-bold mb-4">Quick Check-In</h3>
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               <button onClick={() => handleAddCall('call', friend)} className="btn h-24 bg-gray-50 border-none flex flex-col gap-2">
                 <img src={callIcon} alt="Call" className="w-6" /> Call
               </button>

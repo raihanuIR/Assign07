@@ -1,11 +1,14 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import { createBrowserRouter, RouterProvider  } from 'react-router'
+import { createBrowserRouter, RouterProvider } from 'react-router'
 import Layout from './components/Layout'
 import Home from './pages/Home'
-
+import TimelineProvider from './Context/TimelineProvider'
 import FriendDetails from './pages/FriendDetails'
+import Timeline from './pages/Timeline'
+import { ToastContainer } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 const router = createBrowserRouter([
   {
@@ -20,12 +23,19 @@ const router = createBrowserRouter([
         path: 'friend/:id',
         element: <FriendDetails />,
       },
+      {
+        path: 'timeline',
+        element: <Timeline />,
+      },
     ],
   },
 ])
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <TimelineProvider>
+      <RouterProvider router={router} />
+      <ToastContainer position="top-center" />
+    </TimelineProvider>
   </StrictMode>,
 )

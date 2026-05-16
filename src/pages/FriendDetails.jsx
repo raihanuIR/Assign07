@@ -3,7 +3,10 @@ import { BellOff, Archive, Trash2 } from 'lucide-react';
 import friendsData from '../../friends.json';
 import callIcon from '../assets/call.png';
 import textIcon from '../assets/text.png';
-import videoIcon from '../assets/video.png';
+import videoIcon from '../assets/video.png'; 
+import { useContext } from 'react';
+import {TimelineContext} from '../Context/Context'
+import { toast } from 'react-toastify';
 
 const FriendDetails = () => {
   const { id } = useParams();
@@ -13,7 +16,29 @@ const FriendDetails = () => {
 
   const { name, picture, days_since_contact, tags, status, bio, goal, next_due_date, email } = friend;
 
-  
+  const {timelines, setTimelines} = useContext(TimelineContext);
+
+  const handleAddCall = (type, friend) => {
+    const newData = {
+        action: type,
+        bio: friend.bio,
+        id: friend.id,
+        image: friend.picture,
+        name: friend.name,
+        time: new Date().toISOString()
+    };
+    setTimelines([...timelines, newData]);
+    
+    const toastMessages = {
+      call: "Phone call logged successfully! 📞",
+      text: "Text message logged successfully! 💬",
+      video: "Video call logged successfully! 📹"
+    };
+    
+    toast.success(toastMessages[type] || "Check-in logged successfully!");
+  }
+
+
   const getStatusColor = () => {
     if (status === 'overdue') return 'bg-red-500';
     if (status === 'almost due') return 'bg-orange-400';
@@ -96,13 +121,13 @@ const FriendDetails = () => {
           <div className="bg-white p-6 rounded-lg shadow">
             <h3 className="font-bold mb-4">Quick Check-In</h3>
             <div className="grid grid-cols-3 gap-4">
-              <button className="btn h-24 bg-gray-50 border-none flex flex-col gap-2">
+              <button onClick={() => handleAddCall('call', friend)} className="btn h-24 bg-gray-50 border-none flex flex-col gap-2">
                 <img src={callIcon} alt="Call" className="w-6" /> Call
               </button>
-              <button className="btn h-24 bg-gray-50 border-none flex flex-col gap-2">
+              <button onClick={() => handleAddCall('text', friend)} className="btn h-24 bg-gray-50 border-none flex flex-col gap-2">
                 <img src={textIcon} alt="Text" className="w-6" /> Text
               </button>
-              <button className="btn h-24 bg-gray-50 border-none flex flex-col gap-2">
+              <button onClick={() => handleAddCall('video', friend)} className="btn h-24 bg-gray-50 border-none flex flex-col gap-2">
                 <img src={videoIcon} alt="Video" className="w-6" /> Video
               </button>
             </div>

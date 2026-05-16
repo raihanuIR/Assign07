@@ -1,0 +1,137 @@
+[
+    {
+        "id": 1,
+        "name": "Sarah Jenkins",
+        "picture": "https://randomuser.me/api/portraits/women/44.jpg",
+        "email": "sarah.jenkins89@example.com",
+        "days_since_contact": 35,
+        "status": "overdue",
+        "tags": [
+            "work",
+            "mentor"
+        ],
+        "bio": "Former manager from TechCorp. Always gives great career advice over coffee.",
+        "goal": 30,
+        "next_due_date": "2026-05-11"
+    },
+    {
+        "id": 2,
+        "name": "Michael Chen",
+        "picture": "https://randomuser.me/api/portraits/men/32.jpg",
+        "email": "mchen.design@example.com",
+        "days_since_contact": 5,
+        "status": "on-track",
+        "tags": [
+            "college",
+            "gaming"
+        ],
+        "bio": "Roommate from sophomore year. We still play co-op games online every few weeks.",
+        "goal": 14,
+        "next_due_date": "2026-05-25"
+    },
+    {
+        "id": 3,
+        "name": "Elena Rodriguez",
+        "picture": "https://randomuser.me/api/portraits/women/68.jpg",
+        "email": "elena.rodriguez.arts@example.com",
+        "days_since_contact": 85,
+        "status": "overdue",
+        "tags": [
+            "travel",
+            "close friend"
+        ],
+        "bio": "Met during the backpacking trip in Spain. We usually do long catch-up calls.",
+        "goal": 60,
+        "next_due_date": "2026-04-20"
+    },
+    {
+        "id": 4,
+        "name": "David Kim",
+        "picture": "https://randomuser.me/api/portraits/men/45.jpg",
+        "email": "dkim_fitness@example.com",
+        "days_since_contact": 12,
+        "status": "almost due",
+        "tags": [
+            "gym",
+            "local"
+        ],
+        "bio": "Workout buddy. We spot each other and grab smoothies afterwards.",
+        "goal": 14,
+        "next_due_date": "2026-05-18"
+    },
+    {
+        "id": 5,
+        "name": "Aisha Patel",
+        "picture": "https://randomuser.me/api/portraits/women/22.jpg",
+        "email": "aisha.p.writer@example.com",
+        "days_since_contact": 2,
+        "status": "on-track",
+        "tags": [
+            "book club",
+            "local"
+        ],
+        "bio": "Co-hosts the monthly sci-fi book club. Always shares the best reading recommendations.",
+        "goal": 30,
+        "next_due_date": "2026-06-13"
+    },
+    {
+        "id": 6,
+        "name": "James O'Connor",
+        "picture": "https://randomuser.me/api/portraits/men/11.jpg",
+        "email": "j.oconnor.tech@example.com",
+        "days_since_contact": 88,
+        "status": "almost due",
+        "tags": [
+            "networking",
+            "industry"
+        ],
+        "bio": "Met at the Developer Summit last year. Good connection for industry trends.",
+        "goal": 90,
+        "next_due_date": "2026-05-18"
+    },
+    {
+        "id": 7,
+        "name": "Chloe Dubois",
+        "picture": "https://randomuser.me/api/portraits/women/31.jpg",
+        "email": "chloe.bakes@example.com",
+        "days_since_contact": 20,
+        "status": "overdue",
+        "tags": [
+            "childhood friend",
+            "close friend"
+        ],
+        "bio": "Grew up on the same street. She now runs a bakery downtown.",
+        "goal": 14,
+        "next_due_date": "2026-05-10"
+    },
+    {
+        "id": 8,
+        "name": "Marcus Johnson",
+        "picture": "https://randomuser.me/api/portraits/men/84.jpg",
+        "email": "mjohnson_music@example.com",
+        "days_since_contact": 40,
+        "status": "on-track",
+        "tags": [
+            "band",
+            "music"
+        ],
+        "bio": "Former drummer from our indie band. Lives in Austin now, catch up every few months.",
+        "goal": 90,
+        "next_due_date": "2026-07-05"
+    },
+    {
+        "id": 9,
+        "name": "Priya Sharma",
+        "picture": "https://randomuser.me/api/portraits/women/55.jpg",
+        "email": "priya.data@example.com",
+        "days_since_contact": 6,
+        "status": "almost due",
+        "tags": [
+            "work",
+            "lunch buddy"
+        ],
+        "bio": "Works in the Data Science department. We usually grab lunch on Thursdays.",
+        "goal": 7,
+        "next_due_date": "2026-05-17"
+    }
+]
